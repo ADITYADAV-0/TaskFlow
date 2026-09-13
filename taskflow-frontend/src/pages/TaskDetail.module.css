@@ -1,0 +1,130 @@
+.page {
+  max-width: 62rem;
+}
+
+.backLink {
+  background: none;
+  border: none;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: var(--space-5);
+}
+
+.backLink:hover {
+  color: var(--ink);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 16rem;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.title {
+  margin-bottom: var(--space-3);
+}
+
+.metaRow {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+.section {
+  margin-bottom: var(--space-6);
+}
+
+.sectionHeading {
+  font-size: 0.95rem;
+  text-transform: none;
+  color: var(--ink-soft);
+  margin-bottom: var(--space-3);
+  font-family: var(--font-body);
+  font-weight: 700;
+}
+
+.descriptionText {
+  margin: 0;
+}
+
+.commentList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.comment {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.commentMeta {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  font-size: 0.85rem;
+}
+
+.commentTime {
+  color: var(--ink-faint);
+  font-size: 0.78rem;
+}
+
+.commentBody {
+  margin: 0.15rem 0 0;
+  font-size: 0.92rem;
+}
+
+.noComments {
+  color: var(--ink-faint);
+  font-size: 0.88rem;
+}
+
+.commentForm {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-end;
+}
+
+.commentForm textarea {
+  flex: 1;
+  font-family: inherit;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  resize: vertical;
+}
+
+.sidebar {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  position: sticky;
+  top: calc(var(--topbar-height) + var(--space-4));
+}
+
+.sidebarMeta {
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  border-top: 1px solid var(--border);
+  padding-top: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+@media (max-width: 780px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+    order: -1;
+  }
+}
